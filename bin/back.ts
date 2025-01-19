@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-import * as cdk from 'aws-cdk-lib';
-import { BackStack } from '../lib/back-stack';
+import * as cdk from "aws-cdk-lib";
+import { BackStack } from "../lib/back-stack";
 
 const app = new cdk.App();
-new BackStack(app, 'BackStack', {
+new BackStack(app, "BackStack", {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
@@ -17,4 +17,5 @@ new BackStack(app, 'BackStack', {
   // env: { account: '123456789012', region: 'us-east-1' },
 
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
+  env: { region: "us-east-1" },
 });
